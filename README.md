@@ -1,6 +1,6 @@
 # Digital Demography (Population Data and Science)
-**European Doctoral School of Demography 2021**
-*March 01-05 2021*
+**European Doctoral School of Demography 2022**
+*February 21-25 2022*
 
 In this repo you will find all the materials needed to complete this week's course, including the syllabus, readings, and the data and instructions for the final assignment. 
 
@@ -29,4 +29,4 @@ Best of luck!
 [Diego Alburez-Gutierrez](https://www.demogr.mpg.de/en/about_us_6113/staff_directory_1899/diego_alburez_gutierrez_3783), PhD  
 Research Scientist at the Laboratory of Digital and Computational Demography  
 Max Planck Institute for Demographic Research  
-Instructor at the [European Doctoral School of Demography](https://ced.uab.cat/en/courses/edsd/) (Barcelona, 2019-2020)
+Instructor at the [European Doctoral School of Demography](https://ced.uab.cat/en/courses/edsd/)
