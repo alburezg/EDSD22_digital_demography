@@ -1,0 +1,193 @@
+---
+title: "4 - Crowd-sourced online data"
+author: | 
+  | Diego Alburez-Gutierrez
+  | MPIDR
+  | European Doctoral School of Demography 2021-22
+date: "24 February 2022"
+output: 
+   beamer_presentation:
+      includes:
+         in_header: header_pagenrs.tex
+urlcolor: blue
+---
+
+## Agenda
+
+1. Q&A
+1. Crowd-sourced data
+1. **Break**
+1. User-generated family trees
+1. Limitations and bias
+
+## Q&A
+
+- Questions about the assignment
+- Questions about the study last week
+- Other?
+
+# Crowd-sourced data
+
+## What is crowd-sourced data?
+
+- 'Bottom-up' user-generated content
+- Usually large
+- Available online - may have been produced offline
+- By-product of decentralized activity
+
+## Examples in this session
+
+1. Recruitment platforms
+1. Family history research
+
+## Group discussion
+
+Consider this image of Twitter user demographics: 
+
+![](resources/pyramid.PNG){width=250px}
+
+1. Do you see anything odd?
+1. What might be causing the issue?
+
+## Online recruitment + post-stratification
+
+![Different demographics](resources/poll.PNG){width=400px}
+
+\tiny Wang, Rothschild, Goel, and Gelman 2015. Forecasting elections with non-representative polls. International Journal of Forecasting, 31 (3).
+
+## Forecasting with non-representative polls
+
+![Likelihood of Obama victory](resources/poll2.PNG){width=400px}
+
+\tiny Wang, Rothschild, Goel, and Gelman 2015. Forecasting elections with non-representative polls. International Journal of Forecasting, 31 (3).
+
+## An example closer to home
+
+![Learning more about the coronavirus](resources/health.PNG){width=350px}
+
+\tiny Grow, A., Perrotta, D., Del Fava, E., Cimentada, J., Rampazzo, F., Gil-Clavel, S., and Zagheni, E. (2020). Addressing Public Health Emergencies via Facebook Surveys: Advantages, Challenges, and Practical Considerations. Journal of Medical Internet Research 22(12):e20653
+
+# Break 
+
+
+# Online genealogies
+
+## A genealogy is the history of a population
+
+![A Geni.com family tree](resources/geni2.PNG){width=350px}
+
+## WikiTree
+
+![Cool dataviz, but what do we learn from the data?](resources/wikitree.PNG){width=250px}
+
+\tiny Fire, M. and Elovici, Y. (2015). Data mining of online genealogy datasets for revealing lifespan patterns in human population. ACM Trans. Intell. Syst. Technol. 6(2):28:1–28:22.
+
+## Geni.com: a social network for genealogists
+
+![Everyone's relative](resources/geni.PNG){width=350px}
+
+## Built on top of (private) genomic data
+
+!['Ethnicity' estimates](resources/dna_map.PNG){width=350px}
+
+## Our example: Familinx data
+
+1. Genealogy-driven social media data
+1. Goal: register entire population of the world
+1. 86M unique profiles over last 400 years
+1. Curated, with quality checks
+1. Geo-coded events - 55% Europe; 30% North America
+
+\tiny Kaplanis, J., et al. (2018). Quantitative analysis of population-scale family trees with millions of relatives. Science 360(6385):171–175.
+
+## Geographic distribution in Familinx
+
+![Birth events worldwide](resources/birth_map.png){width=350px}
+
+\tiny Diego Alburez-Gutierrez (2020)
+
+## Population alive by age group (all countries)
+
+![Yearly censuses from Familinx data](resources/yearly_pop_ag.png){width=350px}
+
+\tiny Diego Alburez-Gutierrez (2020)
+
+## Male bias in online genealogies (Familinx)
+
+![Sex ratio in Sweden](resources/sex_ratio_comparative){width=250px}
+
+## The data generating process
+
+![Power law function of genealogists](resources/profiles_created){width=350px}
+
+\tiny Diego Alburez-Gutierrez (2020)
+
+## A closer look at the data generating process
+
+![The crowd-sourcers](resources/myheritage.png){width=300px}
+
+\tiny https://blog.myheritage.com/2019/09/myheritage-live-2019-recap/
+
+## The Swedish sample
+
+![Subseting a genealogical network](resources/swe_net){width=250px}
+
+\tiny Diego Alburez-Gutierrez and Samin Aref (2020)
+
+## Geographic distribution in Familinx data (sample)
+
+![Birth events in Sweden over time](resources/birth_map_swe){width=250px}
+
+\tiny Diego Alburez-Gutierrez (2020)
+
+## Bias in lifespan dynamics from online genealogies
+
+![Life expectancies at age 30](resources/Smoothed_LE_Benchmark_A){width=350px}
+
+\tiny Stelter, R. and Alburez-Gutierrez, D. (forthcoming). Representativeness is crucial for inferring demographic processes from online genealogies: Evidence from lifespan dynamics. Proceedings of the National Academy of Sciences.
+
+
+## Correcting bias: an example using post-stratification weights
+
+**Starting point**:
+Online genealogies are a non-representative sample of real-world genealogies.
+
+- Online genealogies $\neq$ offline genealogies
+- Unknown `weights' - derive from comparison to trusted sources 
+- Understand data-generating process
+  
+\tiny Wang, W., Rothschild, D., Goel, S., and Gelman, A. (2015). Forecasting elections with
+non-representative polls. International Journal of Forecasting, 31(3), 980-991.
+
+## Numerator - death events
+
+![Observed deaths in four countries](resources/weights5x5_fem_deaths_all){width=350px}
+
+## Denominator or exposure
+
+![Population alive by age and sex in four countries](resources/weights5x5_fem_exp_all){width=350px}
+
+## 'Corrected' demographic rates (Finland)
+
+![Weighted mortality rates](resources/FIN_curves){width=350px}
+
+
+\tiny Chong, Alburez-Gutierrez, Del Fava, Alexander, Zagheni (2022). Identifying and correcting bias in big crowd-sourced online genealogies. MPIDR Working Paper. Rostock: Max Planck Institute for Demographic Research.DOI: [10.4054/MPIDR-WP-2022-005](https://doi.org/10.4054/MPIDR-WP-2022-005).
+
+## 'Corrected' life expectancy (Finland)
+
+![Weighted Life expectancy](resources/FIN_life_exp){width=350px}
+
+
+\tiny Chong, Alburez-Gutierrez, Del Fava, Alexander, Zagheni (2022). Identifying and correcting bias in big crowd-sourced online genealogies. MPIDR Working Paper. Rostock: Max Planck Institute for Demographic Research.DOI: [10.4054/MPIDR-WP-2022-005](https://doi.org/10.4054/MPIDR-WP-2022-005).
+
+## Group discussion
+
+![](resources/light.png){width=40px}
+
+Think about a way in which you could use crowd-sourcing in your own research.
+
+1. Which platform would you use?
+1. Which challenges do you foresee?
+1. Special measures to protect privacy?
+

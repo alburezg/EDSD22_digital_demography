@@ -1,0 +1,193 @@
+---
+title: "3 - Digital trace data (2/2):"
+subtitle: "Linking excess mortality to Google mobility data during the COVID-19 pandemic"
+author: | 
+  | Diego Alburez-Gutierrez
+  | MPIDR
+  | European Doctoral School of Demography 2021-22
+date: "23 February 2022"
+output: 
+   beamer_presentation:
+      includes:
+         in_header: header_pagenrs.tex
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+## Agenda
+
+1. Q&A
+1. Case study: Google mobility and excess mortality
+1. **Break** 
+1. Dissect study
+
+## Q&A
+
+- Questions about the assignment
+- Questions about digital trace data
+- Other?
+
+# Case study: Google mobility and excess mortality
+
+## Introduction
+
+**Background**
+
+- Non-pharmaceutical interventions to contain COVID-19  
+
+**Goal**
+
+- Assess effectiveness of NPIs in reducing mortality burden
+
+**Approach**
+
+- Excess mortality and human mobility at regional level in England and Wales (Feb-Aug 2020)
+- Cross-sectional analysis and mixed-effect regression models 
+
+
+\tiny Basellini, U., Alburez-Gutierrez, D., Del Fava, E., Perrotta, D., Bonetti, M., Camarda, C. and Zagheni, E. (2021). "Linking excess mortality to Google mobility data during the COVID-19 pandemic in England and Wales". SSM - Population Health, 14. DOI: [j.ssmph.2021.100799](https://doi.org/10.1016/j.ssmph.2021.100799).
+
+## Mortality data: death counts
+
+
+![](resources/F1b)
+
+\tiny Weekly deaths registered in the region of London. Week 1, 2015 -- Week 39, 2020. *Source: ONS (2020)*
+
+## Mortality data: excess mortality rate
+
+![](resources/F1b2)
+
+\tiny Excess mortality rate (per 100,000 individuals) in the region of London. Week 1, 2015 -- Week 39, 2020. *Source: elaborations of data from ONS (2020)*
+
+## Excess mortality rate by region
+
+![](resources/F1e)
+
+\tiny Excess mortality rate (per 100,000 individuals) by region. Week 1, 2015 -- Week 39, 2020. *Source: elaborations of data from ONS (2020)*
+
+## Mobility data: Google Community Reports
+
+![](resources/F2.png)
+
+\tiny Available at \url{https://www.google.com/covid19/mobility/}
+
+## Mobility data: grocery \& stay-at-home
+
+![](resources/F3a)
+
+\tiny Relative change in visits to groceries and pharmacies and time spent at home with respect to start of 2020. Region of London,  weeks 8--11, 2020 (15 February -- 13 March). *Source: elaborations of data from Google (2020)*
+
+## Mobility data: grocery \& stay-at-home
+
+![](resources/F3b)
+
+\tiny Relative change in visits to groceries and pharmacies and time spent at home with respect to start of 2020. Region of London,  weeks 8--12, 2020 (15 February -- 20 March). *Source: elaborations of data from Google (2020)*
+
+## Mobility data: grocery \& stay-at-home
+
+![](resources/F3c)
+
+\tiny Relative change in visits to groceries and pharmacies and time spent at home with respect to start of 2020. Region of London,  weeks 8--14, 2020 (15 February -- 04 April). *Source: elaborations of data from Google (2020)*
+
+## Mobility data: grocery \& stay-at-home
+
+![](resources/F3d)
+
+\tiny Relative change in visits to groceries and pharmacies and time spent at home with respect to start of 2020. Region of London,  weeks 8--39, 2020 (15 February -- 25 September).  *Source: elaborations of data from Google (2020)*
+
+## Google mobility index
+
+1. Reduce dimensionality of mobility data retaining variation
+1. [Category, regions, time] $\rightarrow$ [regions, time]
+1. Multilinear principal component analysis (first component)
+1. `rTensor` package
+
+## Google mobility index
+
+![](resources/FB1b)
+
+
+## Excess mortality \& mobility (Google mobility index)
+
+![](resources/F1)
+
+
+## Excess mortality \& lagged mobility (Google mobility index)
+
+![](resources/FB4)
+
+<!-- ## Regression analysis -->
+
+<!-- xx -->
+
+## Model results
+
+![](resources/F2)
+
+## Counterfactual analysis
+
+![](resources/F3)
+
+
+## Conclusions
+
+1. Association between mobility reduction and excess mortality 
+1. Lag of five or more weeks
+1. Results confirmed in regression setting accounting for pandemic time trend and regional differences
+1. Estimated 93,700 (85,400-102,500) excess deaths 
+1. Doubled without mobility reductions  
+
+## Limitations
+
+**Groups discussion after break...**
+
+# Break
+
+# Discussion
+
+## Group discussion: research design
+
+![](resources/light.png){width=40px}
+
+The papers links mobility restrictions to excess mortality:
+
+1. What are some **strenghts** of the research design?
+1. What are some **weaknesses** of the research design?
+
+## Analysis of research design
+
+*Strenghts*
+
+1. Excess mortality as outcome (alternative definitions)
+1. Account for infection-death lag
+
+*Weaknesses*
+
+1. Ecological study
+1. Mortality reporting (accuracy, lags)
+
+## Group discussion: digital trace data
+
+![](resources/light.png){width=40px}
+
+The papers users Google mobility data as an explanatory variable:
+
+1. What are some **strenghts** of the use of digital trace data?
+1. What are some **weaknesses** of the use of digital trace data?
+
+## Use of digital trace data
+
+*Strengths*
+
+1. Real-time mobility data
+1. Uses different measures of mobility
+
+*Weaknesses*
+
+1. Internet penetration rates
+1. Algorithmic black-box of Google data

@@ -1,0 +1,30 @@
+---
+title: "Digital Demography Assignment"
+output: pdf_document
+author: |
+  | your_name
+  | European Doctoral School of Demography
+date: "xx 2022"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Exercise 1 
+
+
+```{r}
+
+# Type your code here...
+
+```
+
+
+\clearpage
+
+
+# Exercise 2
+

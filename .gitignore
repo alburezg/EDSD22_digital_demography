@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+archive/
+Readings/
+Assignment/Data/*key.csv
+Assignment/Data/*.txt
+Assignment/key
+Assignment/submissions
+Syllabus/*.docx
